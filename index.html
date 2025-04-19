@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+       <div class="container">
+        <nav>
+            <img src="logo.jpg" class="logo">
+            
+            
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+        </nav>
+        
+        <div class="header-text">
+            <p> A PICT Student</p>
+            <h1> Hi! I'm <span>Mrunmayi</span><br> Shendkar from Pune</h1>
+          
+        </div>
+       </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="portfolio.png">
+                </div>
+                <div class="about-col-2"> 
+                     <h1 class ="subtitle"> About Me</h1>
+                     <p>
+                        I'm a first-year Electronics and Telecommunication student at Pune Institute of Computer Technology. I'm an enthusiastic learner with a passion for both designing and coding. I'm also an active member of the Automobile Club at my college. A nature lover at heart, I enjoy exploring new things. This is my first time working on a website, and I'm absolutely loving the experience.
+                     </p>
+                     <div class="tabtitles">
+                        <p class="tablinks activelink" onclick="opentab(event,'skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab(event,'education')">Education</p>
+                        
+                     </div>
+                     <div class="tabcontents" id="skills" >
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
+                            <li><span>Backend</span><br>C++ and Python</li>
+                            
+                        </ul>
+                     </div>
+                     
+                     <div class="tabcontents" id="education" >
+                        <ul>
+                            <li><span>2024-2028</span><br>Electronics and Telecommunication at PICT</li>
+                            <li><span>2022-2024</span><br>Secondary Education at H.B.Girme</li>
+                            <li><span>2016-2022</span><br>Primary Education at Sardar Dastur Hormazdiar High School</li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Hobbies">
+        <div class="container">
+            <h1 class="subtitle"> Hobbies</h1>
+            <div class="hobbieslist">
+                <div class="hobby">
+                    <img src="books.jpg">
+                    <div class="layer">
+                        <h3> Reading Books</h3>
+                        <p>Reading helps me unwind while expanding my knowledge and imagination. I enjoy exploring different genres and gaining new perspectives through stories and ideas.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="hobby">
+                    <img src="travelling.jpg">
+                    <div class="layer">
+                        <h3> Travelling Around the World</h3>
+                    <p> I love exploring new places, cultures, and landscapes. Traveling fuels my curiosity, broadens my perspective, and inspires me to see the world through different lenses.</p>
+                    <a href="#"></a>
+                    </div>
+                </div>
+                <div class="hobby">
+                    <img src="painting.jpg">
+                    <div class="layer">
+                        <h3>Painting</h3>
+                    <p>Painting allows me to express my thoughts and emotions creatively. It's a peaceful escape that helps me bring imagination to life through colors and brushstrokes.</p>
+                    <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <h1>My Contact</h1>
+            <p> Name: Mrunmayi Santosh Shendkar<br>
+                Phone no: 8149869931<br>
+                E-mail id: mrunmayisshendkar@gmail.com<br>
+            </p>
+            
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+      var tabcontents = document.getElementsByClassName("tabcontents");
+        function opentab(event,tabname){
+            for (let tablink of tablinks){
+                tablink.classList.remove("activelink");
+            }
+            for(let tabcontent of tabcontents){
+                tabcontent.classList.remove("activetab");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("activetab");
+        }
+    </script>
+</body>
+</html>
